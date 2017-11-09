@@ -22,14 +22,13 @@ io.on('connection', (socket) => {
 	// 	console.log('Mail:', email);
 	// });
 
-	socket.emit('newMessage', {
-		from: 'silvester',
-		text: 'Be online at 6.',
-		createdAt: 42143
-	});
-
 	socket.on('createMessage', (message) => {
 		console.log('New message: ', message);
+		io.emit('newMessage', {
+			from: message.from,
+			text: message.text,
+			createdAt: new Date().getTime()
+		});
 	});
 
 	socket.on('disconnect', (socket) => {

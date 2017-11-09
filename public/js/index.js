@@ -7,10 +7,6 @@ socket.on('connect', function() {
 	// 	to: 'aks@example.com',
 	// 	text: 'Hi there!!'
 	// });
-	socket.emit('createMessage', {
-		from: 'Akash',
-		text: 'Okey. Sure will be'
-	});
 })
 
 socket.on('disconnect', function() {
