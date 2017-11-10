@@ -1,7 +1,7 @@
 const expect = require('expect');
 
 const {app} = require('./../server');
-var {generateMessage} = require('./message')
+var {generateMessage, generateLocationMessage} = require('./message')
 
 describe('generateMessage', () => {
 
@@ -14,5 +14,16 @@ describe('generateMessage', () => {
 				text: 'Testing generateMessage func'
 			})
 			
+	});
+});
+
+describe('generateLocationMessage', () => {
+	it('should generate correct location object', () => {
+		var res = generateLocationMessage('Akash',10, 20);
+		expect(res.createdAt).toBeA('number');
+		expect(res).toInclude({
+			from: 'Akash',
+			url: 'https://google.com/maps?q=10,20'
+		})
 	});
 });
