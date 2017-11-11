@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="./css/styles.css">
-	<title></title>
+	<link rel="stylesheet" href="/css/styles.css">
+	<title>ChatApp</title>
 </head>
 
 <body class="chat">
@@ -14,7 +13,8 @@
 	</div>
 
 	<div class="chat__main">
-		<ol id="messages" id="chat__messages"></ol>
+		<ol id="messages" class="chat__messages"></ol>
+		
 		<div class="chat__footer">
 			<form id="message-form">
 				<input type="text" name="message" placeholder="Message" autofocus autocomplete="off">
@@ -48,10 +48,10 @@
 		</li>
 	</script>
 
-	<script src="socket.io/socket.io.js"></script>
-	<script src="./js/libs/jquery-3.2.1.min.js"></script>
-	<script src="./js/libs/moment.js"></script>
-	<script src="./js/libs/mustache.js"></script>
-	<script src="./js/index.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/js/libs/jquery-3.2.1.min.js"></script>
+	<script src="/js/libs/moment.js"></script>
+	<script src="/js/libs/mustache.js"></script>
+	<script src="/js/index.js"></script>
 </body>
 </html>
